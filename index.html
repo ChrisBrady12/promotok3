@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nueva página</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<center><img id="img1" src="izzi.png" alt="logo izzi"></center><br>
+<center><h1>LA AMABILIDAD MEJORA LA RELACION CON EL CLIENTE</h1></center>
+<center><h2>POR FAVOR OBSERVA EL VIDEO Y POSTERIORMENTE INGRESA AL PROMOTOK 3</h2></center><br>
+<div class="video-preview">
+<img src="p3.png" alt="Vista previa del video" id="previewImg">
+<script>
+document.querySelector('img').addEventListener('contextmenu', function(e) {
+e.preventDefault();
+  });
+</script>
+<center><button class="play-button" onclick="reproducirVideo()">
+<svg viewBox="0 0 24 24">
+      <path d="M8 5v14l11-7z"/>
+    </svg>    
+</button></center>
+<video id="video" src="promo3.mp4" controls></video>
+<script>
+document.querySelector('video').addEventListener('contextmenu', function(e) {
+e.preventDefault();
+  });
+</script>
+</div>
+<br><br><br>
+<center><a href="https://forms.office.com/r/8A2aa2U4mE">PROMOTOK 3</a></center><br>
+<center><img id="img2" src="manos.png" alt="imagen"></center><br>
+</div>
+<script>
+    function reproducirVideo() {
+      const video = document.getElementById('video');
+      const previewImg = document.getElementById('previewImg');
+      const playBtn = document.querySelector('.play-button');
+previewImg.style.display = 'none';
+playBtn.style.display = 'none';
+video.style.display = 'block';
+video.play();
+    }
+    
+</script>
+</body>
+</html>
